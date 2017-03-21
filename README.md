@@ -13,7 +13,8 @@ The TodoApp would have the following features/modules -
 - Todo Service Abstraction 
 - Todo Service Implementation in various formats
   - In-memory
-  - Embedded DB (OrientDB)
+  - In-memory DB (H2 DB)
+  - Embedded DB (Orient DB)
   - MySql
   - Mongo DB
 - User session management

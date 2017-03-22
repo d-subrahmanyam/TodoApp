@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.subbu.todoapp</groupId>
-    <artifactId>parent</artifactId>
+    <artifactId>com.subbu.todoapp.parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -14,9 +14,11 @@
     </properties>
 
     <modules>
-        <module>model</module>
-        <module>inmemory-persistence</module>
-        <module>service</module>
+        <module>com.subbu.todoapp.model</module>
+        <module>com.subbu.todoapp.inmemory-persistence</module>
+        <module>com.subbu.todoapp.service</module>
+        <module>com.subbu.todoapp.features</module>
+        <module>com.subbu.todoapp.command</module>
         <!-- TODO implement the following -->
         <!-- <module>inmemory-db-persistence</module> -->
         <!-- <module>orient-db-persistence</module> -->
@@ -77,6 +79,16 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>org.osgi</groupId>
+                <artifactId>org.osgi.core</artifactId>
+                <version>6.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.osgi</groupId>
+                <artifactId>osgi.cmpn</artifactId>
+                <version>6.0.0</version>
+            </dependency>
+            <dependency>
                 <groupId>org.hibernate.javax.persistence</groupId>
                 <artifactId>hibernate-jpa-2.1-api</artifactId>
                 <version>1.0.0.Final</version>
@@ -108,6 +120,22 @@
                 <artifactId>junit</artifactId>
                 <version>4.12</version>
                 <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.karaf.shell</groupId>
+                <artifactId>org.apache.karaf.shell.console</artifactId>
+                <version>4.0.7</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.karaf.shell</groupId>
+                <artifactId>org.apache.karaf.shell.table</artifactId>
+                <version>4.0.7</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.karaf.shell</groupId>
+                <artifactId>org.apache.karaf.shell.commands</artifactId>
+                <version>4.0.7</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
